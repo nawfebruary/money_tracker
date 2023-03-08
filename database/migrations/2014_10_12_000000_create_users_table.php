@@ -13,12 +13,30 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('users', function($table) {
+        Schema::dropIfExists('users');
+        Schema::create('users', function($table) {
+            $table->integer('id')->unsigned()->index();
+            $table->string('member_id')->nullable();
+            $table->string('name')->nullable();
+            $table->string('email')->nullable();
+            $table->string('type')->nullable();
+            $table->string('provider_id')->nullable();
             $table->string('password')->nullable();
             $table->datetime('new_date_of_birth')->nullable();
-            $table->integer('role_id')->nullable();
+            $table->integer('role_id')->unsigned()->nullable();
+            $table->string('gender')->nullable();
+            $table->string('webuser')->nullable();
+            $table->integer('udid')->nullable();
+            $table->integer('active')->nullable();
+            $table->integer('app_version')->nullable();
+            $table->integer('platform')->nullable();
+            $table->integer('user_kind')->nullable();
+            $table->string('category_order')->nullable();
+            $table->string('encoding')->nullable();
+            $table->timestamps();
+            $table->datetime('deleted_at')->nullable(); 
+            $table->foreign('role_id')->references('id')->on('roles');               
         });
-
     }
 
     /**
@@ -28,10 +46,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('users', function($table) {
-            $table->dropColumn('password');
-            $table->dropColumn('new_date_of_birth');
-            $table->dropColumn('role_id');
-        });
+        Schema::create('user_information');
     }
 };

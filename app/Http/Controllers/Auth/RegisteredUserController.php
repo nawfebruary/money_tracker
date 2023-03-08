@@ -70,7 +70,7 @@ class RegisteredUserController extends Controller
             'category_order' => null,
             'encoding' => null,
             'password' => Hash::make($request->password),
-            'role_id' => 3,
+            'role_id' => 1,
         ]);
 
         event(new Registered($user));

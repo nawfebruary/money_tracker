@@ -1,5 +1,5 @@
 @extends('layouts.auth')
-@section('title', 'Shwesuboo')
+@section('title', 'MoneyTracker')
 @section('content')
     <div class="stepper stepper-links d-flex flex-column">
         <!--begin::Nav-->

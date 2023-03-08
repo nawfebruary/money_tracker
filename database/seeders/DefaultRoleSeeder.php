@@ -14,8 +14,7 @@ class DefaultRoleSeeder extends Seeder
     public function run()
     {
         DB::table('roles')->insert([
-            'id' => 3,
-            'name' => 'User',
+            'id' => 1,
             'name' => 'user',
             'permissions' => '{}',
             'created_at' => now(),

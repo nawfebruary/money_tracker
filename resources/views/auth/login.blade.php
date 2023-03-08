@@ -6,7 +6,7 @@
         <!--begin::Heading-->
         <div class="text-center mb-10">
             <!--begin::Title-->
-            <h1 class="text-dark mb-3">Sign In to Shwesuboo</h1>
+            <h1 class="text-dark mb-3">Sign In </h1>
             <!--end::Title-->
             <!--begin::Link-->
             <div class="text-gray-400 fw-bold fs-4">New Here?

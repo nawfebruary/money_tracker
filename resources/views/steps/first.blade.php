@@ -1,5 +1,5 @@
 @extends('layouts.step')
-@section('title', 'Shwesuboo')
+@section('title', 'MoneyTracker')
 @section('content')
     <div class="stepper stepper-links d-flex flex-column">
         <!--begin::Nav-->
@@ -33,7 +33,7 @@
                 <!--begin::Heading-->
                 <div class="mb-13">
                     <!--begin::Title-->
-                    <h2 class="mb-3">အသုံးပြုသူ အမျိုးအစား</h2>
+                    <h2 class="mb-3">User Type</h2>
                     <!--end::Title-->
                 </div>
                 <!--end::Heading-->

@@ -4,16 +4,16 @@
 	<head><base href="../../../">
 		<title>@yield('title')</title>
 		<meta charset="utf-8" />
-		<meta name="description" content="Shwesuboo" />
-		<meta name="keywords" content="Shwesuboo" />
+		<meta name="description" content="MoneyTracker" />
+		<meta name="keywords" content="MoneyTracker" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="Shwesuboo" />
-		<meta property="og:url" content="http://app.shwesuboo.com/" />
-		<meta property="og:site_name" content="Keenthemes | Metronic" />
-		<link rel="canonical" href="http://app.shwesuboo.com/" />
-		<link rel="shortcut icon" href="assets/media/logos/logo-light-icon.png" />
+		<meta property="og:title" content="MoneyTracker" />
+		<meta property="og:url" content="" />
+		<meta property="og:site_name" content="" />
+		<link rel="canonical" href="" />
+		<!-- <link rel="shortcut icon" href="assets/media/logos/logo-light-icon.png" /> -->
 		<!--begin::Fonts-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 		<!--end::Fonts-->

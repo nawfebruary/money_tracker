@@ -11,7 +11,7 @@
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 
-    <link rel="shortcut icon" href="assets/media/logos/logo-light-icon.png" />
+    <!-- <link rel="shortcut icon" href="assets/media/logos/logo-light-icon.png" /> -->
 
     <!--begin::Page Vendor Stylesheets(used by this page)-->
     <link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />

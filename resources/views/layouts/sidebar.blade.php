@@ -5,7 +5,7 @@
 						<!--begin::Logo-->
 						<a href="{{ route('dashboard') }}" class="d-flex align-items-center">
 							<img alt="Logo" src="assets/media/logos/logo-light-icon.png" class="h-50px logo" />
-                            <span class="text-white align-middle fs-2 fw-bold">Shwesuboo</span>
+                            <span class="text-white align-middle fs-2 fw-bold">  </span>
 						</a>
 						<!--end::Logo-->
 						<!--begin::Aside toggler-->
