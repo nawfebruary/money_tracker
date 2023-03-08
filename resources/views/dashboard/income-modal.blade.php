@@ -50,13 +50,15 @@
                                 class="form-control form-control-solid bg-transparent d-none p-3 border border-1 rounded-top"
                                 placeholder="Add new category" oninput="validateSpace(this)" autofocus />
 
-                            <ul id="income_mee" class="d-none border-1 rounded-bottom border-top-0">
-                                @foreach ($categories->groupBy('type')['income'] as $category)
-                                    <li class="list-group-item bg-hover-secondary border-0 border-bottom-dotted"
-                                        name="{{ $category->id }}">
-                                        {{ $category->name }}</li>
-                                @endforeach
-                            </ul>
+                                @if(count($categories))
+                                    <ul id="income_mee" class="d-none border-1 rounded-bottom border-top-0">
+                                        @foreach ($categories->groupBy('type')['income'] as $category)
+                                            <li class="list-group-item bg-hover-secondary border-0 border-bottom-dotted"
+                                                name="{{ $category->id }}">
+                                                {{ $category->name }}</li>
+                                        @endforeach
+                                    </ul>
+                                @endif
                         </div>
                         <!--end::Select-->
                     </div>

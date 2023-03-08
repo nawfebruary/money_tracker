@@ -17,8 +17,9 @@ if (!function_exists('generateUserId')) {
 
     function generateUserId()
     {
-        $user = User::select('id')->orderBy('id', 'desc')->first();
-        return ($user->id + 1);
+        $user = User::orderBy('id', 'desc')->first();
+        return $user ? ($user->id + 1) : 1;
+
     }
 
 }

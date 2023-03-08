@@ -37,7 +37,8 @@ class IncomeRepository implements IncomeRepositoryInterface
 
     public function getLastestId()
     {
-        return Income::select('id')->orderBy('id', 'desc')->first();
+        $data =  Income::orderBy('id', 'desc')->first();
+        return $data ?? null;
     }
 
     public function getWeeklyIncome($userId)

@@ -18,7 +18,7 @@
     <meta property="og:url" content="" />
     <meta property="og:site_name" content="Keenthemes | Metronic" />
     <link rel="canonical" href="" />
-    <link rel="shortcut icon" href="assets/media/logos/logo-light-icon.png" />
+    <!-- <link rel="shortcut icon" href="assets/media/logos/logo-light-icon.png" /> -->
     <!--begin::Fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
     <!--end::Fonts-->
@@ -44,9 +44,9 @@
             <!--begin::Content-->
             <div class="d-flex flex-center flex-column flex-column-fluid p-10 pb-lg-20">
                 <!--begin::Logo-->
-                <a href="#" class="mb-12">
+                <!-- <a href="#" class="mb-12">
                     <img alt="Logo" src="assets/media/logos/logo-light-icon.png" class="h-100px" />
-                </a>
+                </a> -->
                 <!--end::Logo-->
                 <!--begin::Wrapper-->
                 <div class="w-lg-500px bg-body rounded shadow-sm p-10 p-lg-15 mx-auto">

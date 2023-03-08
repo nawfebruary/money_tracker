@@ -26,16 +26,17 @@ return new class extends Migration
             $table->integer('role_id')->unsigned()->nullable();
             $table->string('gender')->nullable();
             $table->string('webuser')->nullable();
-            $table->integer('udid')->nullable();
+            $table->string('udid')->nullable();
             $table->integer('active')->nullable();
             $table->integer('app_version')->nullable();
             $table->integer('platform')->nullable();
-            $table->integer('user_kind')->nullable();
+            $table->string('user_kind')->nullable();
             $table->string('category_order')->nullable();
             $table->string('encoding')->nullable();
             $table->timestamps();
             $table->datetime('deleted_at')->nullable(); 
-            $table->foreign('role_id')->references('id')->on('roles');               
+            $table->foreign('role_id')->references('id')->on('roles');
+            $table->rememberToken();               
         });
     }
 

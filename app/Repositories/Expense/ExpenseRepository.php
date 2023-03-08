@@ -37,7 +37,8 @@ class ExpenseRepository implements ExpenseRepositoryInterface
 
     public function getLastestId()
     {
-        return Expense::select('id')->orderBy('id', 'desc')->first();
+       $data =  Expense::orderBy('id', 'desc')->first();
+        return $data ?? null;
     }
 
     public function getWeeklyExpense($userId)

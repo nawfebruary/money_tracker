@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('category_id')->unsigned();
             $table->integer('user_id')->unsigned();
             $table->timestamps();
+            $table->datetime('deleted_at')->nullable();
         });
     }
 

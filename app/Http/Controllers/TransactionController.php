@@ -52,7 +52,9 @@ class TransactionController extends Controller
             }
             // $req['created_at'] = $req['updated_at'] = time();
             $id = ($req['isIncome'] === '0') ? $this->expenseRepo->getLastestId() : $this->incomeRepo->getLastestId();
-            $req['id'] = $id->id + 1;
+
+            $req['id'] = (is_null($id)) ? 1 : ($id['id'] + 1);
+
             $res = ($req['isIncome'] === '0') ? $this->expenseRepo->create($req) : $this->incomeRepo->create($req);
 
             if ($res) {
@@ -60,7 +62,7 @@ class TransactionController extends Controller
             } else {
                 return back()->with('errors', 'failed');
             }
-        } catch (\Exception$e) {
+        } catch (\Exception $e) {
             return back()->with('errors', 'failed');
         }
 

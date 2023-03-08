@@ -23,34 +23,37 @@ class DashboardController extends Controller
 
     public function index(Request $request)
     {
+        try{
+                $userId = Auth::user()->id;
 
-        $userId = Auth::user()->id;
+                $incomes = $this->incomeRepo->getAllTransactionsByUserId($userId);
 
-        $incomes = $this->incomeRepo->getAllTransactionsByUserId($userId);
+                $expenses = $this->expenseRepo->getAllTransactionsByUserId($userId);
 
-        $expenses = $this->expenseRepo->getAllTransactionsByUserId($userId);
+                $count = count($incomes) + count($expenses);
 
-        $count = count($incomes) + count($expenses);
+                $transactions = $this->categoryRepo->getAllTransactionsByUserId($userId);
 
-        $transactions = $this->categoryRepo->getAllTransactionsByUserId($userId);
+                if ($request->ajax()) {
+                    return Response::json(View::make('dashboard.transactions-pagination', compact('transactions', 'count'))->render());
+                }
 
-        if ($request->ajax()) {
-            return Response::json(View::make('dashboard.transactions-pagination', compact('transactions', 'count'))->render());
+                $categories = $this->categoryRepo->getAllCategories();
+
+                $sumOfIncome = $incomes->sum('amount');
+
+                $sumOfExpense = $expenses->sum('amount');
+                                
+                return view('dashboard.index', [
+                    'transactions' => $transactions,
+                    'count' => $count,
+                    'sumOfIncome' => $sumOfIncome,
+                    'sumOfExpense' => $sumOfExpense,
+                    'categories' => $categories,
+                ]);
+        }catch (\Exception $e) {
+        dd($e);
         }
-
-        $categories = $this->categoryRepo->getAllCategories();
-
-        $sumOfIncome = $incomes->sum('amount');
-
-        $sumOfExpense = $expenses->sum('amount');
-
-        return view('dashboard.index', [
-            'transactions' => $transactions,
-            'count' => $count,
-            'sumOfIncome' => $sumOfIncome,
-            'sumOfExpense' => $sumOfExpense,
-            'categories' => $categories,
-        ]);
     }
 
     public function getLastWeekIncomeAndExpense(Request $request)
